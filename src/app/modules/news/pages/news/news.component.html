@@ -1,0 +1,15 @@
+<app-layout-base [hasData]="news.length > 0">
+	<app-title [withSeparator]="true">Todas las noticias</app-title>
+
+	<div class="row mt-5">
+		<div class="col-6 p-2" *ngFor="let newsItem of news">
+			<a [routerLink]="['/news', newsItem.newId]">
+				<app-card-news
+					[title]="newsItem.title"
+					[imageUrl]="newsItem.imageUrl"
+					[htmlContent]="newsItem.shortDescription"
+				></app-card-news>
+			</a>
+		</div>
+	</div>
+</app-layout-base>

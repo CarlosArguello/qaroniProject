@@ -1,0 +1,15 @@
+<app-layout-base [hasData]="detailGroup != null">
+	<div class="col-10">
+		<app-title>{{ detailGroup?.name | titlecase }}</app-title>
+		<div class="mt-4">
+			<img
+				[src]="
+					detailGroup.imageUrl
+						? detailGroup.imageUrl
+						: 'https://cdn.pixabay.com/photo/2017/04/08/10/23/surfing-2212948_960_720.jpg'
+				"
+				width="100%"
+			/>
+		</div>
+	</div>
+</app-layout-base>

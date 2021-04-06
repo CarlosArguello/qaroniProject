@@ -1,0 +1,11 @@
+<mat-card style="height: 100%">
+	<img mat-card-image height="220" [src]="imageUrl" />
+	<mat-card-title
+		class="text-lg mt-2 fw-700 text-overflow _text-primary"
+		>{{ title }}</mat-card-title
+	>
+
+	<mat-card-content class="line-overflow text-sm">
+		<app-html-content [html]="htmlContent"></app-html-content>
+	</mat-card-content>
+</mat-card>

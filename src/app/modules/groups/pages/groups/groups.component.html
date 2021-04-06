@@ -1,0 +1,19 @@
+<app-layout-base [hasData]="groups.length > 0">
+	<app-title [withSeparator]="true">Todos los grupos</app-title>
+
+	<div class="row mt-5">
+		<div class="col-4 p-2" *ngFor="let group of groups">
+			<a [routerLink]="['/groups', group.groupId]">
+				<app-card-group
+					[title]="group.name"
+					[category]="group.category?.name"
+					[imageUrl]="
+						group.imageUrl
+							? group.imageUrl
+							: 'https://cdn.pixabay.com/photo/2017/04/08/10/23/surfing-2212948_960_720.jpg'
+					"
+				></app-card-group>
+			</a>
+		</div>
+	</div>
+</app-layout-base>

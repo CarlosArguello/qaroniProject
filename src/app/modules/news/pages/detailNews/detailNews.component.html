@@ -1,0 +1,16 @@
+<app-layout-base [hasData]="detailNews != null">
+	<app-title>{{ detailNews?.title }}</app-title>
+	<div class="col-10">
+		<img
+			class="mt-4 mb-4"
+			width="100%"
+			height="450px"
+			[src]="detailNews?.imageUrl"
+			alt=""
+		/>
+		<app-html-content
+			class="text-base"
+			[html]="detailNews?.largeDescription"
+		></app-html-content>
+	</div>
+</app-layout-base>

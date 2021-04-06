@@ -1,0 +1,8 @@
+<app-layout-base [hasData]="true">
+	<div class="col-5 m-auto pt-5">
+		<mat-card class="p-5">
+			<mat-card-title class="text-center fw-700">Login</mat-card-title>
+			<app-login-form (onSubmit)="sendLogging($event)"></app-login-form>
+		</mat-card>
+	</div>
+</app-layout-base>

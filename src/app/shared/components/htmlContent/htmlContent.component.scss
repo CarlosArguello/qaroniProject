@@ -1,0 +1,33 @@
+@import "../../../../variables.scss";
+
+.html-content {
+	max-width: 100%;
+	img {
+		max-width: 100% !important;
+		margin: 15px 0;
+	}
+
+	p {
+		line-height: 2;
+	}
+
+	a {
+		color: $secondary;
+		text-decoration-line: underline !important;
+	}
+
+	ul li {
+		list-style: none;
+		line-height: 2;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			margin-right: 8px;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: $secondary;
+		}
+	}
+}

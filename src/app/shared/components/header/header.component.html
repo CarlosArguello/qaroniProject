@@ -1,0 +1,39 @@
+<div class="sticky-top _bg-primary">
+	<div class="container">
+		<mat-toolbar class="_bg-primary p-0">
+			<a [routerLink]="['/']" class="fw-700 _text-light">
+				<img
+					src="https://www.qaroni.com/assets/images/logos/qaroni-logo-white@2x.svg"
+					alt="Qaroni logo"
+					height="45px"
+				/>
+			</a>
+
+			<div class="-spacer"></div>
+
+			<a [routerLink]="['/news']" class="mx-3 text-sm _text-light fw-600"
+				>Noticias</a
+			>
+
+			<a
+				*ngIf="!isLogged"
+				[routerLink]="['/login']"
+				class="mx-3 text-sm _text-light fw-600"
+				>Login</a
+			>
+
+			<a
+				*ngIf="isLogged"
+				routerLink="/groups"
+				class="mx-3 text-sm _text-light fw-600"
+				>Grupos</a
+			>
+			<a
+				*ngIf="isLogged"
+				(click)="logout()"
+				class="ml-3 text-sm _text-light fw-600"
+				>Salir</a
+			>
+		</mat-toolbar>
+	</div>
+</div>

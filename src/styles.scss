@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "./variables.scss";
+
+* {
+	font-family: Montserrat;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+._text-primary {
+	color: $primary;
+}
+
+._bg-primary {
+	background-color: $primary;
+}
+
+._text-secondary {
+	color: $secondary;
+}
+
+._bg-secondary {
+	background-color: $secondary;
+}
+
+._text-dark {
+	color: $dark;
+}
+
+._bg-dark {
+	background-color: $dark;
+}
+
+._text-light {
+	color: $light !important;
+}
+
+._bg-light {
+	background-color: $light;
+}
+
+$sizes: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+@each $size in $sizes {
+	.fw-#{$size} {
+		font-weight: $size !important;
+	}
+}
+
+.text-overflow {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 100%;
+}
+
+a {
+	text-decoration: none !important;
+	cursor: pointer;
+}
+
+.text-xs {
+	font-size: 0.75rem !important;
+}
+.text-sm {
+	font-size: 0.875rem !important;
+}
+.text-base {
+	font-size: 1rem !important;
+}
+.text-lg {
+	font-size: 1.125rem !important;
+}
+.text-xl {
+	font-size: 1.25rem !important;
+}
+.text-2xl {
+	font-size: 1.5rem !important;
+}
+.text-3xl {
+	font-size: 1.875rem !important;
+}
+.text-4xl {
+	font-size: 2.25rem !important;
+}
+.text-5xl {
+	font-size: 3rem !important;
+}
+.text-6xl {
+	font-size: 3.75rem !important;
+}
+.text-7xl {
+	font-size: 4.5rem !important;
+}
+.text-8xl {
+	font-size: 6rem !important;
+}
+.text-9xl {
+	font-size: 8rem !important;
+}

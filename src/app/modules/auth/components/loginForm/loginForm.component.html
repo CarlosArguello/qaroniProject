@@ -1,0 +1,44 @@
+<form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+	<mat-form-field class="d-block py-3">
+		<input matInput placeholder="Usuario" formControlName="username" />
+		<mat-error *ngIf="controls.username.hasError('required'); else email">
+			Requerido
+		</mat-error>
+
+		<ng-template #email>
+			<mat-error *ngIf="controls.username.hasError('email')">
+				Email invalido
+			</mat-error>
+		</ng-template>
+	</mat-form-field>
+
+	<mat-form-field class="d-block">
+		<input
+			matInput
+			type="password"
+			placeholder="Contraseña"
+			formControlName="password"
+		/>
+
+		<mat-error
+			*ngIf="controls.password.hasError('required'); else password"
+		>
+			Requerido
+		</mat-error>
+		<ng-template #password>
+			<mat-error *ngIf="controls.password.hasError('minlength')">
+				Min. 4 caracteres
+			</mat-error>
+		</ng-template>
+	</mat-form-field>
+
+	<div class="d-flex justify-content-center mt-4">
+		<button
+			type="submit"
+			class="_bg-secondary _text-light"
+			mat-raised-button
+		>
+			Ingresar
+		</button>
+	</div>
+</form>
