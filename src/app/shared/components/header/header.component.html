@@ -11,29 +11,39 @@
 
 			<div class="-spacer"></div>
 
-			<a [routerLink]="['/news']" class="mx-3 text-sm _text-light fw-600"
-				>Noticias</a
+			<a
+				[routerLink]="['/news']"
+				class="mx-2 mx-md-3 text-sm _text-light fw-600 d-inline-flex align-items-center"
 			>
+				<i class="far fa-newspaper mr-1 text-lg"></i>
+				<span class="d-none d-md-inline">Noticias</span>
+			</a>
 
 			<a
 				*ngIf="!isLogged"
 				[routerLink]="['/login']"
-				class="mx-3 text-sm _text-light fw-600"
-				>Login</a
+				class="mx-2 mx-md-3 text-sm _text-light fw-600 d-inline-flex align-items-center"
 			>
+				<i class="fas fa-sign-in-alt mr-1 text-lg"></i>
+				<span class="d-none d-md-inline">Login</span>
+			</a>
 
 			<a
 				*ngIf="isLogged"
 				routerLink="/groups"
-				class="mx-3 text-sm _text-light fw-600"
-				>Grupos</a
+				class="mx-2 mx-md-3 text-sm _text-light fw-600 d-inline-flex align-items-center"
 			>
+				<i class="fas fa-users mr-1 text-lg"></i>
+				<span class="d-none d-md-inline">Grupos</span>
+			</a>
 			<a
 				*ngIf="isLogged"
 				(click)="logout()"
-				class="ml-3 text-sm _text-light fw-600"
-				>Salir</a
+				class="mx-2 ml-md-3 text-sm _text-light fw-600 d-inline-flex align-items-center"
 			>
+				<i class="fas fa-sign-out-alt mr-1 text-lg"></i>
+				<span class="d-none d-md-inline">Salir</span>
+			</a>
 		</mat-toolbar>
 	</div>
 </div>

@@ -2,7 +2,7 @@
 	<app-title [withSeparator]="true">Todas las noticias</app-title>
 
 	<div class="row mt-5">
-		<div class="col-6 p-2" *ngFor="let newsItem of news">
+		<div class="col-12 col-md-6 p-2" *ngFor="let newsItem of news">
 			<a [routerLink]="['/news', newsItem.newId]">
 				<app-card-news
 					[title]="newsItem.title"

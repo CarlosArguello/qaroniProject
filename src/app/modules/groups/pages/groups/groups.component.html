@@ -2,7 +2,7 @@
 	<app-title [withSeparator]="true">Todos los grupos</app-title>
 
 	<div class="row mt-5">
-		<div class="col-4 p-2" *ngFor="let group of groups">
+		<div class="col-12 col-md-6 col-lg-4 p-2" *ngFor="let group of groups">
 			<a [routerLink]="['/groups', group.groupId]">
 				<app-card-group
 					[title]="group.name"
